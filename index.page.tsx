@@ -7,11 +7,14 @@ import { CardWithCode } from './@theme/components/CardWithCode/CardWithCode';
 import { Card } from '@redocly/theme/markdoc/components/Cards/Card';
 import { Cards } from '@redocly/theme/markdoc/components/Cards/Cards';
 
-const code = `curl -X POST \\
-  https://api.warp.com/warp/v1/time/set \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{"time": "+1s"}'
+const code = `POST /api/transactions
+{
+    "id": "16833741-33a0-437c-9c82-368bed96b7f6",
+    "from": "562b5682-7861-49ac-ad60-074fe12ddac2",
+    "to": "7d334e64-d0d3-4941-be6c-f59facf781d6",
+    "currency": "USD",
+    "amount": 314.55
+}
 `;
 
 export default function HomePage() {
@@ -21,64 +24,46 @@ export default function HomePage() {
         <HeroBg />
         {/* <Image srcSet={`${require('./images/grid.svg')} light, ${require('./images/grid-dark.svg')} dark`} /> */}
         <h1>iQ Pro API</h1>
-        <p>Bend Time with the First API for Time Travel</p>
+        <p>A Payment Solutions API Should Fit Your Code, not the other way around</p>
         <Button size="large" variant="primary" tone="brand" to="/guides/quickstart">
           Get started
         </Button>
         <CardWithCode
           title="Quickstart"
-          description="Set up your environment and make your first call to warp you one second into the future."
+          description="Do you speak in code? So do we. Our integration and deployment teams are experts in their field. They provide resources that help your programmers successfully integrate client APIs."
           code={code}
         />
       </HeroContainer>
       <Container>
-        <h3>Accelerate Your Development with the Power of Time</h3>
+        <h3>About us</h3>
         <p>
-          Warp is the groundbreaking API that allows you to navigate, manipulate, and control time. Whether you need to
-          fix critical mistakes, explore alternative histories, or ensure future success, Warp gives you the tools to do
-          so with precision and safety.
+        Basys is a nationwide integrated payment solutions company. We specialize in custom solutions that can adapt and grow with your business. We’re led by a team of exceptional professionals, and we believe in doing things right to better serve our customers.
         </p>
+        <ul>
+          <li>99% of calls are answered in 3 rings or less</li>
+          <li>90% of calls are resolved on the 1st contact</li>
+          <li>75+ excellent level Net Promoter Score</li>
+        </ul>
       </Container>
       <Container>
         <h3>Key Features</h3>
         <Feature>
           <ArrowRightIcon />
-          <p>Time Navigation: Move backward, forward, or pause time with pinpoint accuracy.</p>
+          <p>Tokenizer: With a few lines of code you can take customer payments on your website</p>
         </Feature>
         <Feature>
           <ArrowRightIcon />
-          <p>Temporal Anchoring: Set fixed points in time to safely experiment and return to.</p>
-        </Feature>
-        <Feature>
-          <ArrowRightIcon />
-          <p>Event Manipulation: Modify past events, influence future outcomes, or create alternate timelines.</p>
-        </Feature>
-        <Feature>
-          <ArrowRightIcon />
-          <p>Safety Protocols: Built-in safeguards to prevent paradoxes and unintended consequences.</p>
+          <p>Webhooks: In a few easy steps you can get the data you need to optimize your business</p>
         </Feature>
         <br />
         <ButtonContainer>
           <Button size="large" to="/guides/quickstart">
-            Get started with Warp
+            Get started
           </Button>
-          <Button size="large" to="/guides">
+          <Button size="large" to="/apis">
             Explore documentation
           </Button>
         </ButtonContainer>
-      </Container>
-
-      <Container>
-        <h3>Featured Missions</h3>
-        <Cards>
-          <Card title="The Lost Invention" to="/tutorials/lost-invention">
-            Retrieve Nikola Tesla's lost blueprint before it's destroyed in a mysterious fire.
-          </Card>
-          <Card title="The Missing Mathematician" to="/tutorials/missing-mathematician">
-            Ensure that Katherine Johnson stays on the path that will lead her to NASA and a pivotal role in space
-            exploration.
-          </Card>
-        </Cards>
       </Container>
 
       <Container>
@@ -86,9 +71,9 @@ export default function HomePage() {
           <h3>Need help?</h3>
           <ButtonContainer>
             <Button variant="outlined" size="large">
-              Join our community
+              <a href="tel:8883661325">Contact us</a>
             </Button>
-            <Button variant="outlined" size="large">
+            <Button variant="outlined" size="large" to="/apis">
               Read the docs
             </Button>
           </ButtonContainer>
@@ -172,6 +157,11 @@ const Container = styled.div`
   margin: 64px auto 0;
   a {
     text-decoration: none;
+    color: var(--button-color);
+  }
+
+  a:hover {
+    color: var(--button-color-hover);
   }
 
   p {

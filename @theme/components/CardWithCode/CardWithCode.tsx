@@ -23,11 +23,11 @@ export const CardWithCode = ({ title, description, code }: CardWithCodeProps) =>
         <div className="title">
           <Select
             className="select"
-            value="curl"
+            value="Example"
             options={[
               {
-                element: 'curl',
-                value: 'curl',
+                element: 'Example',
+                value: 'Example',
               },
             ]}
           />
