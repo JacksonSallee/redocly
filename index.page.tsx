@@ -134,7 +134,7 @@ const HeroContainer = styled.div`
   }
 
   > p {
-    color: var(--text-color-primary);
+    color: #006;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
