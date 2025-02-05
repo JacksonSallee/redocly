@@ -54,7 +54,7 @@ const Wrapper = styled.div`
 const Column = styled.div<{ isLeftColumn?: boolean }>`
   border-right: ${({ isLeftColumn }) => isLeftColumn && '1px solid var(--border-color-secondary)'};
   h4 {
-    color: var(--color-magenta-7);
+    color: #9999FF;
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
@@ -62,7 +62,7 @@ const Column = styled.div<{ isLeftColumn?: boolean }>`
   }
 
   p {
-    color: var(--color-persian-green-8);
+    color: var(--color-blue-7);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -70,6 +70,8 @@ const Column = styled.div<{ isLeftColumn?: boolean }>`
     margin: 0 16px 16px 16px;
     text-align: start;
   }
+
+  
 
   .title {
     display: flex;
