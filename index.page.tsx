@@ -117,7 +117,7 @@ const HeroBg = styled.div`
     height: 100%;
     background-image: url(${require('./images/background.png')});
     background-size: cover;
-    opacity: 0.7;
+    opacity: 1;
   }
 `;
 
