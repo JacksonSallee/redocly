@@ -20,7 +20,7 @@ export default function HomePage() {
       <HeroContainer>
         <HeroBg />
         {/* <Image srcSet={`${require('./images/grid.svg')} light, ${require('./images/grid-dark.svg')} dark`} /> */}
-        <h1>Time Travel API</h1>
+        <h1>iQ Pro API</h1>
         <p>Bend Time with the First API for Time Travel</p>
         <Button size="large" variant="primary" tone="brand" to="/guides/quickstart">
           Get started
@@ -115,21 +115,10 @@ const HeroBg = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(${require('./images/background.svg')});
+    background-image: url(${require('./images/background.png')});
     background-size: cover;
     filter: blur(60px);
     opacity: 0.7;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-image: url(${require('./images/grid.svg')});
-    opacity: 0.2;
-    .dark & {
-      background-image: url(${require('./images/grid-dark.svg')});
-    }
   }
 `;
 
@@ -150,7 +139,7 @@ const HeroContainer = styled.div`
   }
 
   h1 {
-    color: var(--color-magenta-5);
+    color: #006;
     text-align: center;
     font-size: 92px;
     font-weight: 700;

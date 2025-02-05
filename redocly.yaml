@@ -7,8 +7,8 @@ links:
   - href: https://fonts.googleapis.com/css2?family=VT323&display=swap
   - href: https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap
 seo:
-  title: Warp API
-  description: Warp is the groundbreaking API that allows you to navigate, manipulate, and control time.
+  title: Basys API Documentation
+  description: Accept Payments on your software. Quickly. Simply. Securely.
 navbar:
   items:
     - page: tutorials/index.md
@@ -27,14 +27,13 @@ markdown:
   toc:
     depth: 2
 logo:
-  image: images/logo.svg
+  srcSet: "./images/light.svg light, ./images/dark.svg dark"
   link: /
+  favicon: images/favicon.svg
 footer:
-  copyrightText: Copyleft © Redocly Inc. No rights reserved.
+  copyrightText: © 2025 iQ Pro is a registered service mark of BASYS Processing. All rights reserved.
   items:
-    - page: legal/terms.md
-      label: Terms
-    - page: legal/responsible-use.md
-      label: Responsible Use
-    - href: /
-      label: Cookies
+    - href: "https://iqpro.com/terms-of-service"
+      label: Terms of Service
+    - href: "https://basyspro.com/privacy-policy/"
+      label: Privacy Policy
